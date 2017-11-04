@@ -1,9 +1,8 @@
 package marvelapplication.usxmobile.es.marvelapplication;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AttributeSet;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -11,16 +10,10 @@ import android.widget.Toast;
 
 import com.trey.marvel.model.api.MarvelApi;
 import com.trey.marvel.model.api.manager.CharacterManager;
-import com.trey.marvel.model.api.manager.ComicManager;
 import com.trey.marvel.model.api.request.CharacterRequest;
 import com.trey.marvel.model.api.request.RequestSignature;
-import com.trey.marvel.model.api.request.StoryRequest;
 import com.trey.marvel.model.api.response.ServiceResponse;
 import com.trey.marvel.model.api.vo.Character;
-import com.trey.marvel.model.api.vo.Story;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import marvelapplication.usxmobile.es.marvelapplication.adapters.ListAdapter;
 import retrofit.Callback;
