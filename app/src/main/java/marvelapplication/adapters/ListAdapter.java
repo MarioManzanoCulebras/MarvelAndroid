@@ -1,4 +1,4 @@
-package marvelapplication.usxmobile.es.marvelapplication.adapters;
+package marvelapplication.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

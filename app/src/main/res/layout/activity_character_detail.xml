@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="marvelapplication.activities.CharacterDetailActivity">
+
+    <ImageView
+        android:id="@+id/char_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src = "@drawable/ic_launcher"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/char_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Sin descripción asociada."/>
+    </ScrollView>
+
+</LinearLayout>
