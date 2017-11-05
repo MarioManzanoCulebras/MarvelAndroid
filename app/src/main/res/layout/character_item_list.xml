@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/character_icon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:src="@drawable/ic_launcher" >
     </ImageView>
 
@@ -15,7 +15,6 @@
         android:id="@+id/character_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PRUEBA"
         android:layout_gravity="center"
          >
     </TextView>

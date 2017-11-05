@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Conexion with Marvel Success", Toast.LENGTH_LONG).show();
                 charging_textview.setVisibility(View.INVISIBLE);
                 listView.setAdapter(new ListAdapter(mainActivityContext,characterServiceResponse.data.results));
-                listView.invalidate();
             }
 
             @Override
             public void failure(RetrofitError error) {
                 //Toast.makeText(getApplicationContext(),"Conexion with Marvel Failed!", Toast.LENGTH_LONG).show();
                 Toast.makeText(getApplicationContext(),error.getResponse().getReason(), Toast.LENGTH_LONG).show();
+                charging_textview.setText("Error");
 
             }
 
