@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
 import com.trey.marvel.model.api.MarvelApi;
 import com.trey.marvel.model.api.manager.CharacterManager;
 import com.trey.marvel.model.api.request.CharacterRequest;
@@ -29,13 +30,12 @@ import retrofit.client.Response;
 public class MainActivity extends AppCompatActivity {
   public static String SER_KEY = "character";
 
-  private ListView listView;
+  @BindView(R.id.characters_list) private ListView listView;
+  @BindView(R.id.charging_textView) private TextView charging_textview;
+  @BindView(R.id.characters_list) private List<Character> characterList;
   private Context mainActivityContext;
-  private TextView charging_textview;
-  private List<Character> characterList;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     MarvelApi.create("74df4d68319995712a351977df04ce64c3657460", "d3b82d4b24b6568a5e075cdd5e7c5c35",
