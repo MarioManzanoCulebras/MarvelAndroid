@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import com.trey.marvel.model.api.MarvelApi;
 import com.trey.marvel.model.api.manager.CharacterManager;
 import com.trey.marvel.model.api.request.CharacterRequest;
@@ -30,19 +31,18 @@ import retrofit.client.Response;
 public class MainActivity extends AppCompatActivity {
   public static String SER_KEY = "character";
 
-  @BindView(R.id.characters_list) private ListView listView;
-  @BindView(R.id.charging_textView) private TextView charging_textview;
-  @BindView(R.id.characters_list) private List<Character> characterList;
+  @BindView(R.id.characters_list) ListView listView;
+  @BindView(R.id.charging_textView) TextView charging_textview;
+  private List<Character> characterList;
   private Context mainActivityContext;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    ButterKnife.bind(this);
     MarvelApi.create("74df4d68319995712a351977df04ce64c3657460", "d3b82d4b24b6568a5e075cdd5e7c5c35",
         getApplicationContext(), 5 * 1024 * 1024);
     mainActivityContext = this;
-    listView = findViewById(R.id.characters_list);
-    charging_textview = findViewById(R.id.charging_textView);
     final CharacterRequest characterRequest = new CharacterRequest(RequestSignature.create());
     characterRequest.setLimit(50);
     characterRequest.setOffset(0);
@@ -58,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(new ListAdapter(mainActivityContext, characterList));
       }
 
-      @Override
-      public void failure(RetrofitError error) {
+      @Override public void failure(RetrofitError error) {
         Toast.makeText(getApplicationContext(), error.getResponse().getReason(), Toast.LENGTH_LONG)
             .show();
         charging_textview.setText("Error");

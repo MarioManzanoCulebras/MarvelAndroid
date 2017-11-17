@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MarvelAndroid.iml" filepath="$PROJECT_DIR$/MarvelAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/MarvelApplication.iml" filepath="$PROJECT_DIR$/MarvelApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/marvel-api/marvel-api.iml" filepath="$PROJECT_DIR$/marvel-api/marvel-api.iml" />
